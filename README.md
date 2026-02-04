@@ -1,64 +1,25 @@
-# Gurman Pannu — Engineering Portfolio
+# Gurman Pannu
+**Aspiring Software Engineer — Systems-aware, pragmatic, and focused on shipping reliable small projects.**
 
-Clean, production-minded portfolio for https://gurmanpannu.dev. Single Node/Express service with Nunjucks templates, containerized for Google Cloud Run.
+This repository is the source for my portfolio site (https://gurmanpannu.dev). It reflects how I approach building and deploying simple, maintainable software.
 
-## Stack
-- Node 20, Express 4 serving static HTML/CSS/JS
-- Static assets in `public/`
-- No database or secrets; fully stateless
+## What I focus on
+- Shipping end-to-end: small front ends, simple APIs, and deployable containers.
+- Using proven tools: Node/Express, HTML/CSS/JS, Docker, Cloud Run.
+- Keeping things understandable: clear structure, minimal dependencies, documented flows.
 
-## Local Development
-```bash
-npm install
-npm run dev
-# open http://localhost:8080
-```
+## Highlights from this repo
+- Single-service Node/Express app serving static pages.
+- Contact form wired to SMTP (shows I can integrate basic backend features).
+- Production-minded artifacts: Dockerfile, health check, and clear structure per page.
+- Per-page folders (`public/home`, `projects`, `experience`, etc.) to keep content modular.
 
-Environment:
-- `PORT` (default: 8080)
-- `NODE_ENV` (use `production` in containers)
+## Deployed home
+The live site is at https://gurmanpannu.dev, served via Google Cloud Run behind a custom domain.
 
-## Project Structure
-- `src/server.js` — Express server and routes
-- `public/` — static assets (HTML, CSS, JS, resume placeholder)
-- `Dockerfile` — production container build
+## If you’re reviewing my work
+- Browse the `public/` folders to see the static pages and styling choices.
+- Check `src/` for how I separate config, routes, and a small mailer.
+- See `public/assets/common` for shared styling and nav behavior.
 
-### Contact form email
-The contact form posts to `/contact` and sends an email via SMTP. Configure env vars (use a provider or Gmail app password):
-- `SMTP_HOST`
-- `SMTP_PORT` (e.g., 465 or 587)
-- `SMTP_USER`
-- `SMTP_PASS`
-- `SMTP_SECURE` (optional, set `"true"` for 465)
-- `CONTACT_TO` (optional; default `pannug598@gmail.com`)
-
-If SMTP isn’t configured, the form will show an error and suggest emailing directly.
-
-## Docker
-```bash
-docker build -t gurmanpannu/portfolio .
-docker run -p 8080:8080 -e PORT=8080 gurmanpannu/portfolio
-```
-
-## Deploy to Cloud Run
-Assumes you have gcloud configured and a GCP project set.
-```bash
-gcloud builds submit --tag gcr.io/PROJECT_ID/gurmanpannu-portfolio
-gcloud run deploy gurmanpannu-portfolio \
-  --image gcr.io/PROJECT_ID/gurmanpannu-portfolio \
-  --platform managed \
-  --region us-central1 \
-  --allow-unauthenticated \
-  --port 8080
-```
-
-## Resume
-Replace `public/resume/Gurman_Pannu_Resume.txt` with a PDF named `Gurman_Pannu_Resume.pdf` and adjust `src/server.js` if you change the filename.
-
-$env:SMTP_HOST="smtp.gmail.com"
-$env:SMTP_PORT="587"
-$env:SMTP_USER="pannug598@gmail.com"
-$env:SMTP_PASS="Cooper@2018@2018"
-$env:SMTP_SECURE="false"    # use "true" if you switch to port 465
-$env:CONTACT_TO="pannug598@gmail.com"
-npm run dev
+Thanks for taking a look!

@@ -1,0 +1,7 @@
+/* Home-specific tweaks */
+.hero {
+  margin-top: 0.5rem;
+}
+.card h2 {
+  font-size: 1.2rem;
+}
