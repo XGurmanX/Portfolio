@@ -30,11 +30,6 @@ export function registerRoutes(app, staticPath, smtpConfig) {
     }
   });
 
-  router.get("/resume", (_req, res) => {
-    const resumePath = path.join(staticPath, "resume", "Gurman_Pannu_Resume.txt");
-    res.sendFile(resumePath);
-  });
-
   router.get("/healthz", (_req, res) => res.json({ status: "ok" }));
 
   app.use(router);

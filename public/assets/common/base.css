@@ -22,6 +22,11 @@ body {
   padding: 0 1.25rem 3rem;
 }
 
+.home-link {
+  text-decoration: none;
+  color: var(--ink);
+}
+
 .site-header {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -32,7 +37,13 @@ body {
   gap: 1rem;
 }
 
-.brand .name { font-weight: 700; font-size: 1.22rem; color: var(--ink); text-decoration: none; }
+.brand .name {
+  font-weight: 700;
+  font-size: 1.22rem;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: none;
+}
 .tagline { margin: 0.2rem 0 0; color: var(--muted); font-size: 0.95rem; }
 
 nav a {
