@@ -6,12 +6,12 @@ export function registerRoutes(app, staticPath, smtpConfig) {
   const router = express.Router();
   const sendPage = (res, parts) => res.sendFile(path.join(staticPath, ...parts));
 
-  router.get("/", (_req, res) => sendPage(res, ["home", "index.html"]));
-  router.get("/projects", (_req, res) => sendPage(res, ["projects", "index.html"]));
-  router.get("/experience", (_req, res) => sendPage(res, ["experience", "index.html"]));
-  router.get("/skills", (_req, res) => sendPage(res, ["skills", "index.html"]));
-  router.get("/about", (_req, res) => sendPage(res, ["about", "index.html"]));
-  router.get("/contact", (_req, res) => sendPage(res, ["contact", "index.html"]));
+  router.get("/", (_req, res) => sendPage(res, ["home", "home.html"]));
+  router.get("/projects", (_req, res) => sendPage(res, ["projects", "projects.html"]));
+  router.get("/experience", (_req, res) => sendPage(res, ["experience", "experience.html"]));
+  router.get("/skills", (_req, res) => sendPage(res, ["skills", "skills.html"]));
+  router.get("/about", (_req, res) => sendPage(res, ["about", "about.html"]));
+  router.get("/contact", (_req, res) => sendPage(res, ["contact", "contact.html"]));
 
   router.post("/contact", async (req, res) => {
     const { name = "No name provided", email = "No email provided", message = "" } = req.body || {};
@@ -30,16 +30,11 @@ export function registerRoutes(app, staticPath, smtpConfig) {
     }
   });
 
-  router.get("/resume", (_req, res) => {
-    const resumePath = path.join(staticPath, "resume", "Gurman_Pannu_Resume.txt");
-    res.sendFile(resumePath);
-  });
-
   router.get("/healthz", (_req, res) => res.json({ status: "ok" }));
 
   app.use(router);
 
   app.use((_req, res) => {
-    res.status(404).sendFile(path.join(staticPath, "404", "index.html"));
+    res.status(404).sendFile(path.join(staticPath, "404", "404.html"));
   });
 }
