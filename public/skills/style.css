@@ -1,0 +1,8 @@
+/* Skills page tweaks */
+.card ul {
+  column-count: 1;
+  margin-top: 0.4rem;
+}
+@media (min-width: 900px) {
+  .card ul { column-count: 2; }
+}

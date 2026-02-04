@@ -1,0 +1,7 @@
+/* Projects page tweaks */
+.card {
+  min-height: 360px;
+}
+.chip-list {
+  margin-top: 0.2rem;
+}
