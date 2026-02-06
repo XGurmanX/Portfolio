@@ -15,7 +15,40 @@ const config = loadConfig();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(staticPath));
+app.use(
+  express.static(staticPath, {
+    setHeaders(res, filePath) {
+      const ext = path.extname(filePath).toLowerCase();
+
+      if (ext === ".html") {
+        res.setHeader("Cache-Control", "no-cache");
+        return;
+      }
+
+      const cacheable = new Set([
+        ".css",
+        ".js",
+        ".mjs",
+        ".png",
+        ".jpg",
+        ".jpeg",
+        ".webp",
+        ".avif",
+        ".svg",
+        ".ico",
+        ".woff",
+        ".woff2"
+      ]);
+
+      if (cacheable.has(ext)) {
+        res.setHeader(
+          "Cache-Control",
+          "public, max-age=604800, stale-while-revalidate=86400"
+        );
+      }
+    }
+  })
+);
 
 registerRoutes(app, staticPath, config.smtp);
 

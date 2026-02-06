@@ -1,8 +1,112 @@
 /* Skills page tweaks */
-.card ul {
-  column-count: 1;
-  margin-top: 0.4rem;
+.section-lead {
+  max-width: 760px;
+  margin-top: 0.2rem;
+  margin-bottom: 1.1rem;
 }
-@media (min-width: 900px) {
-  .card ul { column-count: 2; }
+
+.logo-showcase {
+  background: linear-gradient(140deg, #182434 0%, #151f2d 100%);
+  border-color: #315064;
+  box-shadow:
+    0 8px 16px rgba(2, 8, 18, 0.2),
+    inset 0 1px 0 rgba(232, 237, 243, 0.04);
+}
+
+.stack-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.stack-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.logo-grid {
+  margin-top: 0.6rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(92px, 1fr));
+  gap: 0.6rem;
+}
+
+.logo-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.56rem 0.44rem;
+  border-radius: 12px;
+  border: 1px solid var(--accent-ring);
+  background: linear-gradient(180deg, #162131 0%, #111a27 100%);
+  transition: transform var(--transition), border-color var(--transition), background var(--transition);
+}
+
+.logo-tile:hover {
+  transform: translateY(-1px);
+  border-color: #4a7a87;
+  background: linear-gradient(180deg, #1a283a 0%, #132031 100%);
+}
+
+.logo-tile img {
+  width: 22px;
+  height: 22px;
+  opacity: 0.9;
+}
+
+.logo-tile span {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #dbe8f5;
+  text-align: center;
+}
+
+.skill-matrix {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.skill-card {
+  border-color: #315064;
+  background: linear-gradient(180deg, #172232 0%, #141d2b 100%);
+  box-shadow: inset 0 1px 0 rgba(232, 237, 243, 0.04);
+}
+
+.skill-card.wide {
+  grid-column: span 2;
+}
+
+.skill-card-head h2 {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+.skill-list {
+  margin: 0.2rem 0 0;
+  padding-left: 1.05rem;
+}
+
+.skill-list li {
+  margin-bottom: 0.45rem;
+}
+
+@media (max-width: 880px) {
+  .stack-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .skill-matrix {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-card.wide {
+    grid-column: auto;
+  }
 }
