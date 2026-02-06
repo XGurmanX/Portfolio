@@ -87,11 +87,16 @@
 .hero-stats strong {
   display: block;
   font-size: 1.15rem;
+  line-height: 1.1;
+  margin-bottom: 0.38rem;
 }
 
 .hero-stats span {
   color: var(--muted);
   font-size: 0.83rem;
+  line-height: 1.15;
+  display: block;
+  margin: 0;
 }
 
 .story-grid .card {
