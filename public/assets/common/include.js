@@ -1,9 +1,38 @@
 (() => {
+  function getCachedInclude(url) {
+    try {
+      return window.sessionStorage.getItem(`include:${url}`);
+    } catch {
+      return null;
+    }
+  }
+
+  function setCachedInclude(url, html) {
+    try {
+      window.sessionStorage.setItem(`include:${url}`, html);
+    } catch {
+      // Ignore quota/security errors; this is only a best-effort optimization.
+    }
+  }
+
   async function inject(selector, url) {
     const host = document.querySelector(selector);
     if (!host) return;
-    const html = await fetch(url).then((r) => r.text());
+
+    const cached = getCachedInclude(url);
+    if (cached) {
+      host.innerHTML = cached;
+      return;
+    }
+
+    const response = await fetch(url, { cache: "force-cache" });
+    if (!response.ok) {
+      throw new Error(`Failed to load include: ${url}`);
+    }
+
+    const html = await response.text();
     host.innerHTML = html;
+    setCachedInclude(url, html);
   }
 
   function activateNav() {
@@ -16,7 +45,7 @@
   }
 
   async function init() {
-    await Promise.all([
+    await Promise.allSettled([
       inject('[data-include="header"]', "/assets/common/header.html"),
       inject('[data-include="footer"]', "/assets/common/footer.html"),
     ]);

@@ -12,45 +12,84 @@
   <header class="site-header" data-include="header"></header>
 
   <main>
-    <section class="hero">
-      <p class="eyebrow">Aspiring Software Engineer</p>
-      <h1>Gurman Pannu</h1>
-      <p class="subtitle">
-        CST Student @ BCIT <br /><br />
-        Building a foundation in full-stack web, systems
-        programming, and cybersecurity.
-      </p>
-      <div class="cta-row">
-        <a class="btn primary" href="/about">About Me</a>
-        <a class="btn ghost" href="https://github.com/XGurmanX" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/gurman-pannu-841702293/" target="_blank"
-          rel="noreferrer">LinkedIn</a>
+    <section class="hero hero-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">Aspiring Software Engineer</p>
+        <h1>Gurman Pannu</h1>
+        <p class="subtitle">
+          CST Student at BCIT building a practical foundation in full-stack web, cybersecurity and
+          systems programming.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="/about">About Me</a>
+          <a class="btn ghost" href="/projects">View Projects</a>
+          <a class="btn ghost" href="https://github.com/XGurmanX" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/gurman-pannu/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+        <ul class="quick-meta">
+          <li>Focused on shipping small end-to-end builds</li>
+          <li>Interested in Cybersecurity and Systems Programming</li>
+        </ul>
       </div>
+
+      <aside class="hero-panel">
+        <p class="label">My Stats</p>
+        <h2>Learning by Building</h2>
+        <p>
+          I prefer practical projects over passive study, with each project
+          improving architecture, testing habits, and deployment confidence.
+        </p>
+        <div class="hero-stats">
+          <div>
+            <strong>2</strong>
+            <span>Active GitHub repos</span>
+          </div>
+          <div>
+            <strong>3</strong>
+            <span>Core focus areas</span>
+          </div>
+          <div>
+            <strong>2</strong>
+            <span>Cloud deployed sites</span>
+          </div>
+        </div>
+      </aside>
     </section>
 
-    <section class="grid two">
-      <div class="card">
-        <h2>Hands on learning</h2>
+    <section class="grid two story-grid">
+      <article class="card">
+        <h2>Hands-on learning</h2>
         <p>
-          A big reason why I chose BCIT was its focus on practical skills and hands-on learning. I believe that the best
-          way for me to learn is by doing, and BCIT's approach corresponds perfectly with my learning style.
+          A big reason I chose BCIT was its focus on practical skills and
+          lab-based learning. Building projects helps me understand concepts
+          deeper than theory alone.
         </p>
-      </div>
-      <div class="card">
+      </article>
+      <article class="card">
         <h2>My Toolbelt</h2>
         <p>
-          Throughout my studies and personal projects, I've gained experience with a variety of programming languages
-          and tools including C, C++, Python, Java, HTML/CSS/JavaScript, Git, Docker along with many other skills.
+          I regularly work with C, C++, Java, Python, HTML/CSS/JavaScript, Git,
+          Docker, and Cloud Run while strengthening backend and systems
+          fundamentals.
         </p>
-      </div>
+      </article>
     </section>
 
-    <section class="grid three">
-      <div class="card">
+    <section class="project-showcase">
+      <h2>Project Highlights</h2>
+      <p class="subtitle">
+        Portfolio work plus active project development. I only list completed
+        projects here once the scope and outcome are clear.
+      </p>
+
+      <div class="grid three">
+        <article class="card">
         <p class="label">Full-stack</p>
         <h2>Personal Portfolio</h2>
         <p>
-          A static site built with HTML/CSS/JavaScript to showcase my skills, projects, and experiences. Learned hosting via Google Cloud.
+          Multi-page portfolio using reusable layouts, Express routing, and
+          Cloud deployment to demonstrate practical ownership from code to
+          production.
         </p>
         <ul class="chip-list">
           <li class="chip">HTML</li>
@@ -59,27 +98,28 @@
           <li class="chip">Google Cloud</li>
           <li class="chip">Docker</li>
         </ul>
-      </div>
-      <div class="card">
-        <p class="label">Desktop</p>
-        <h2>JavaFX Utility</h2>
+        </article>
+
+        <article class="card">
+        <p class="label">In Progress</p>
+        <h2>Next Project Slot</h2>
         <p>
-          A small desktop tool to practice navigation, state handling, and tests outside of console apps. Applied OOP principles throughout the development process.
+          I am currently working on the next project and will publish it here
+          when it is complete and production-ready.
         </p>
         <ul class="chip-list">
-          <li class="chip">Java</li>
-          <li class="chip">JavaFX</li>
-          <li class="chip">JUnit</li>
-          <div class="cta-row" style="margin-top: 0.6rem;">
-            <a class="btn ghost" href="/projects">See all projects</a>
-          </div>
+          <li class="chip">Planning</li>
+          <li class="chip">Build Phase</li>
+          <li class="chip">Coming Soon</li>
         </ul>
-      </div>
-      <div class="card">
+        </article>
+
+        <article class="card">
         <p class="label">Game Development</p>
         <h2>Unity Game</h2>
         <p>
-          Followed a tutorial to create a simple 2D asteroids-style game using Unity and C#. Applied OOP principles throughout the development process.
+          Built a 2D asteroids-style project in Unity to strengthen gameplay
+          loops, scripting basics, and interactive design thinking.
         </p>
         <ul class="chip-list">
           <li class="chip">Unity</li>
@@ -87,7 +127,10 @@
           <li class="chip">OOP</li>
           <li class="chip">Game Development</li>
         </ul>
+        </article>
       </div>
+
+      <a class="project-link" href="/projects">See all projects</a>
     </section>
   </main>
 
