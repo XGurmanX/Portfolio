@@ -1,142 +1,210 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home • Gurman Pannu</title>
-  <link rel="stylesheet" href="/assets/common/base.css" />
-  <link rel="stylesheet" href="/home/style.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home • Gurman Pannu</title>
+    <link rel="stylesheet" href="/assets/common/base.css" />
+    <link rel="stylesheet" href="/home/style.css" />
+  </head>
 
-<body>
-  <header class="site-header" data-include="header"></header>
+  <body>
+    <header class="site-header" data-include="header"></header>
 
-  <main>
-    <section class="hero hero-shell">
-      <div class="hero-copy">
-        <p class="eyebrow">Aspiring Software Engineer</p>
-        <h1>Gurman Pannu</h1>
+    <main>
+      <section class="hero hero-shell">
+        <div class="hero-copy">
+          <h1>Gurman Pannu</h1>
+          <p class="subtitle">
+            CST Student at BCIT building a practical foundation in full-stack
+            web, cybersecurity and systems programming.
+          </p>
+          <div class="cta-row">
+            <a class="btn primary" href="/about">About Me</a>
+            <a class="btn ghost" href="/projects">View Projects</a>
+            <a
+              class="btn ghost"
+              href="https://github.com/XGurmanX"
+              target="_blank"
+              rel="noreferrer"
+              >GitHub</a
+            >
+            <a
+              class="btn ghost"
+              href="https://www.linkedin.com/in/gurman-pannu/"
+              target="_blank"
+              rel="noreferrer"
+              >LinkedIn</a
+            >
+          </div>
+          <ul class="quick-meta">
+            <li>Focused on shipping small end-to-end builds</li>
+            <li>Interested in Cybersecurity and Systems Programming</li>
+          </ul>
+        </div>
+
+        <aside class="hero-panel">
+          <p class="label">My Stats</p>
+          <h2>Learning by Building</h2>
+          <p>
+            I prefer practical projects over passive study, with each project
+            improving architecture, testing habits, and deployment confidence.
+          </p>
+          <div class="hero-stats">
+            <div>
+              <strong>7</strong>
+              <span>Languages used</span>
+            </div>
+            <div>
+              <strong>4</strong>
+              <span>Completed projects</span>
+            </div>
+            <div>
+              <strong>5</strong>
+              <span>Years coding</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="grid two story-grid">
+        <article class="card">
+          <h2>Hands-on learning</h2>
+          <p>
+            A big reason I chose BCIT was its focus on practical skills and
+            lab-based learning. Building projects helps me understand concepts
+            deeper than theory alone.
+          </p>
+        </article>
+        <article class="card">
+          <h2>My Toolbelt</h2>
+          <p>
+            I regularly work with C, C++, Java, Python, HTML/CSS/JavaScript,
+            Git, Docker, and Cloud Run while strengthening backend and systems
+            fundamentals.
+          </p>
+        </article>
+      </section>
+
+      <section class="project-showcase">
+        <h2>Project Highlights</h2>
         <p class="subtitle">
-          CST Student at BCIT building a practical foundation in full-stack web, cybersecurity and
-          systems programming.
+          Portfolio work plus active project development. I only list completed
+          projects here once the scope and outcome are clear.
         </p>
-        <div class="cta-row">
-          <a class="btn primary" href="/about">About Me</a>
-          <a class="btn ghost" href="/projects">View Projects</a>
-          <a class="btn ghost" href="https://github.com/XGurmanX" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="btn ghost" href="https://www.linkedin.com/in/gurman-pannu/" target="_blank" rel="noreferrer">LinkedIn</a>
+
+        <div class="grid three">
+          <article class="card">
+            <p class="label">Full-stack</p>
+            <h2>Personal Portfolio</h2>
+            <p>
+              Multi-page portfolio using reusable layouts, Express routing, and
+              Cloud deployment to demonstrate practical ownership from code to
+              production.
+            </p>
+            <ul class="chip-list">
+              <li class="chip">HTML</li>
+              <li class="chip">CSS</li>
+              <li class="chip">JavaScript</li>
+              <li class="chip">Google Cloud</li>
+              <li class="chip">Docker</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <p class="label">In Progress</p>
+            <h2>Next Project Slot</h2>
+            <p>
+              I am currently working on the next project and will publish it
+              here when it is complete and production-ready.
+            </p>
+            <ul class="chip-list">
+              <li class="chip">Planning</li>
+              <li class="chip">Build Phase</li>
+              <li class="chip">Coming Soon</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <p class="label">Game Development</p>
+            <h2>Unity Game</h2>
+            <p>
+              Built a 2D asteroids-style project in Unity to strengthen gameplay
+              loops, scripting basics, and interactive design thinking.
+            </p>
+            <ul class="chip-list">
+              <li class="chip">Unity</li>
+              <li class="chip">C#</li>
+              <li class="chip">OOP</li>
+              <li class="chip">Game Development</li>
+            </ul>
+          </article>
         </div>
-        <ul class="quick-meta">
-          <li>Focused on shipping small end-to-end builds</li>
-          <li>Interested in Cybersecurity and Systems Programming</li>
-        </ul>
-      </div>
 
-      <aside class="hero-panel">
-        <p class="label">My Stats</p>
-        <h2>Learning by Building</h2>
-        <p>
-          I prefer practical projects over passive study, with each project
-          improving architecture, testing habits, and deployment confidence.
+        <a class="project-link" href="/projects">See all projects</a>
+      </section>
+
+      <section class="education">
+        <h2>Education</h2>
+        <p class="subtitle">
+          Two years of CST fundamentals plus a Data Communications option, with
+          BScACS studies continuing next.
         </p>
-        <div class="hero-stats">
-          <div>
-            <strong>2</strong>
-            <span>Active GitHub repos</span>
+        <div class="timeline">
+          <div class="timeline-group single">
+            <article class="timeline-item">
+              <span class="timeline-year">Sept 2026 – May 2028</span>
+              <div class="timeline-card">
+                <p class="label">BCIT</p>
+                <h3>BSc Applied Computer Science (BScACS)</h3>
+                <p>
+                  September 2026 – May 2028. Upper-level study focused on
+                  software engineering practices, systems depth, and applied
+                  computing. Emphasis on design tradeoffs, performance,
+                  reliability, and building maintainable production-quality
+                  software.
+                </p>
+              </div>
+            </article>
           </div>
-          <div>
-            <strong>3</strong>
-            <span>Core focus areas</span>
-          </div>
-          <div>
-            <strong>2</strong>
-            <span>Cloud deployed sites</span>
+
+          <div class="timeline-group">
+            <article class="timeline-item grouped">
+              <span class="timeline-year">Sept 2025 – May 2026</span>
+              <div class="timeline-card">
+                <p class="label">BCIT</p>
+                <h3>Data Communications Option</h3>
+                <p>
+                  The Data Communications option focuses on advanced networking,
+                  distributed systems, and systems-level programming. It covers
+                  how data moves across networks, how servers communicate
+                  reliably at scale, and how to design and implement
+                  multi-server architectures using low-level socket programming
+                  and structured protocols.
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item grouped">
+              <span class="timeline-year">Sept 2024 – May 2026</span>
+              <div class="timeline-card">
+                <p class="label">BCIT</p>
+                <h3>Computer Systems Technology (CST)</h3>
+                <p>
+                  Two-year diploma built around hands-on software engineering
+                  fundamentals: data structures, databases, networking,
+                  operating systems, and full-stack delivery. Coursework
+                  emphasizes practical labs, team projects, and building
+                  end-to-end systems.
+                </p>
+              </div>
+            </article>
           </div>
         </div>
-      </aside>
-    </section>
+      </section>
+    </main>
 
-    <section class="grid two story-grid">
-      <article class="card">
-        <h2>Hands-on learning</h2>
-        <p>
-          A big reason I chose BCIT was its focus on practical skills and
-          lab-based learning. Building projects helps me understand concepts
-          deeper than theory alone.
-        </p>
-      </article>
-      <article class="card">
-        <h2>My Toolbelt</h2>
-        <p>
-          I regularly work with C, C++, Java, Python, HTML/CSS/JavaScript, Git,
-          Docker, and Cloud Run while strengthening backend and systems
-          fundamentals.
-        </p>
-      </article>
-    </section>
+    <footer data-include="footer"></footer>
 
-    <section class="project-showcase">
-      <h2>Project Highlights</h2>
-      <p class="subtitle">
-        Portfolio work plus active project development. I only list completed
-        projects here once the scope and outcome are clear.
-      </p>
-
-      <div class="grid three">
-        <article class="card">
-        <p class="label">Full-stack</p>
-        <h2>Personal Portfolio</h2>
-        <p>
-          Multi-page portfolio using reusable layouts, Express routing, and
-          Cloud deployment to demonstrate practical ownership from code to
-          production.
-        </p>
-        <ul class="chip-list">
-          <li class="chip">HTML</li>
-          <li class="chip">CSS</li>
-          <li class="chip">JavaScript</li>
-          <li class="chip">Google Cloud</li>
-          <li class="chip">Docker</li>
-        </ul>
-        </article>
-
-        <article class="card">
-        <p class="label">In Progress</p>
-        <h2>Next Project Slot</h2>
-        <p>
-          I am currently working on the next project and will publish it here
-          when it is complete and production-ready.
-        </p>
-        <ul class="chip-list">
-          <li class="chip">Planning</li>
-          <li class="chip">Build Phase</li>
-          <li class="chip">Coming Soon</li>
-        </ul>
-        </article>
-
-        <article class="card">
-        <p class="label">Game Development</p>
-        <h2>Unity Game</h2>
-        <p>
-          Built a 2D asteroids-style project in Unity to strengthen gameplay
-          loops, scripting basics, and interactive design thinking.
-        </p>
-        <ul class="chip-list">
-          <li class="chip">Unity</li>
-          <li class="chip">C#</li>
-          <li class="chip">OOP</li>
-          <li class="chip">Game Development</li>
-        </ul>
-        </article>
-      </div>
-
-      <a class="project-link" href="/projects">See all projects</a>
-    </section>
-  </main>
-
-  <footer data-include="footer"></footer>
-
-  <script src="/assets/common/include.js"></script>
-</body>
-
+    <script src="/assets/common/include.js"></script>
+  </body>
 </html>
