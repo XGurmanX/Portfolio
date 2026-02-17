@@ -51,7 +51,8 @@
   background: linear-gradient(180deg, #1a283a 0%, #132031 100%);
 }
 
-.logo-tile img {
+.logo-tile img,
+.logo-tile .logo-icon {
   width: 22px;
   height: 22px;
   opacity: 0.9;
