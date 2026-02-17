@@ -30,14 +30,14 @@ The project follows a simple, production-conscious layout:
 
 src/                 → Backend configuration, routes, mailer logic  
 public/  
-  home/  
-  projects/  
-  experience/  
-  skills/  
-  about/  
-  contact/  
-  404/  
-  assets/common/     → Shared styling, header/footer logic  
+--home/  
+--projects/  
+--experience/  
+--skills/  
+--about/  
+--contact/  
+--404/  
+--assets/common/     → Shared styling, header/footer logic  
 
 Dockerfile           → Containerized deployment  
 
