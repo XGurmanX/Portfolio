@@ -24,6 +24,7 @@ body {
   color: var(--ink);
   line-height: 1.7;
   padding: 0 1.25rem 3rem;
+  caret-color: transparent;
 }
 
 body::before {
@@ -195,6 +196,8 @@ li { margin-bottom: 0.35rem; }
   border-color: var(--accent-ring);
 }
 .contact-form textarea { resize: vertical; min-height: 140px; }
+input,
+textarea { caret-color: auto; }
 .form-note { color: var(--muted); margin: 0.1rem 0 0; }
 .form-note a { color: var(--accent); text-decoration: none; }
 .form-note a:hover { text-decoration: underline; }

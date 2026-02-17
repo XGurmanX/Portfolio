@@ -1,5 +1,10 @@
 (() => {
+  const isLocalhost =
+    window.location.hostname === "localhost" ||
+    window.location.hostname === "127.0.0.1";
+
   function getCachedInclude(url) {
+    if (isLocalhost) return null;
     try {
       return window.sessionStorage.getItem(`include:${url}`);
     } catch {
@@ -8,6 +13,7 @@
   }
 
   function setCachedInclude(url, html) {
+    if (isLocalhost) return;
     try {
       window.sessionStorage.setItem(`include:${url}`, html);
     } catch {
@@ -25,7 +31,9 @@
       return;
     }
 
-    const response = await fetch(url, { cache: "force-cache" });
+    const response = await fetch(url, {
+      cache: isLocalhost ? "no-store" : "force-cache",
+    });
     if (!response.ok) {
       throw new Error(`Failed to load include: ${url}`);
     }
