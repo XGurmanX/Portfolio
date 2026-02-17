@@ -75,32 +75,41 @@
   margin-bottom: 1rem;
 }
 
-.hero-stats {
+.profile-card {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.55rem;
+  justify-items: center;
+  text-align: center;
+  gap: 0.7rem;
 }
 
-.hero-stats div {
-  border: 1px solid var(--accent-ring);
-  border-radius: 10px;
-  padding: 0.55rem;
-  background: linear-gradient(180deg, #162131 0%, #111a27 100%);
+.profile-avatar {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--accent-ring);
+  background:
+    radial-gradient(circle at 30% 25%, rgba(240, 246, 252, 0.18), transparent 38%),
+    linear-gradient(160deg, #27415a 0%, #1a2c3f 48%, #132231 100%);
+  color: #f0f6fc;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  box-shadow:
+    0 10px 20px rgba(4, 12, 22, 0.34),
+    inset 0 1px 0 rgba(232, 237, 243, 0.15);
 }
 
-.hero-stats strong {
-  display: block;
-  font-size: 1.15rem;
-  line-height: 1.1;
-  margin-bottom: 0.38rem;
-}
-
-.hero-stats span {
-  color: var(--muted);
-  font-size: 0.83rem;
-  line-height: 1.15;
-  display: block;
+.profile-card h2 {
   margin: 0;
+}
+
+.profile-card p {
+  margin: 0;
+  color: var(--muted);
 }
 
 .story-grid .card {
@@ -278,14 +287,9 @@ main > section:nth-child(3) {
     grid-template-columns: 1fr;
   }
 
-  .hero-stats {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 600px) {
-  .hero-stats {
-    grid-template-columns: 1fr;
+  .profile-avatar {
+    width: 160px;
+    height: 160px;
   }
 }
 
