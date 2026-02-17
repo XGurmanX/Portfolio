@@ -20,6 +20,12 @@
   text-decoration: underline;
 }
 
+.card {
+  border-color: #315064;
+  background: linear-gradient(180deg, #172232 0%, #141d2b 100%);
+  box-shadow: inset 0 1px 0 rgba(232, 237, 243, 0.04);
+}
+
 .timeline {
   margin: 1.4rem 0 0;
   padding: 0;
@@ -88,12 +94,8 @@
   padding: 1.1rem;
   margin-left: var(--group-shift);
   border-radius: 18px;
-  border: 1px solid rgba(49, 80, 100, 0.55);
-  background: linear-gradient(
-    180deg,
-    rgba(20, 30, 44, 0.92) 0%,
-    rgba(17, 26, 39, 0.92) 100%
-  );
+  border: 1px solid #315064;
+  background: linear-gradient(180deg, #172232 0%, #141d2b 100%);
   box-shadow: inset 0 1px 0 rgba(232, 237, 243, 0.04);
 }
 
@@ -113,7 +115,220 @@
   margin-top: 0.2rem;
   margin-bottom: 0.6rem;
   font-size: 1.1rem;
-  color: #f0f6fc;
+  color: var(--ink);
+}
+
+.photo-card {
+  padding: 1rem;
+  border-top: 4px solid var(--accent-ring);
+  border-color: #315064;
+  background: linear-gradient(180deg, #172232 0%, #141d2b 100%);
+  box-shadow: inset 0 1px 0 rgba(232, 237, 243, 0.04);
+}
+
+.photo-card:hover {
+  transform: none;
+  border-color: #315064;
+  box-shadow: inset 0 1px 0 rgba(232, 237, 243, 0.04);
+}
+
+.photo-status {
+  margin: 0;
+  color: var(--muted);
+}
+
+.photo-carousel {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.photo-main {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.photo-image-link {
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  overflow: hidden;
+  border: none;
+  background: linear-gradient(180deg, #172232 0%, #141d2b 100%);
+  padding: 0;
+}
+
+.photo-image {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: min(72vh, 760px);
+  object-fit: contain;
+  border-radius: 14px;
+  clip-path: inset(0 round 14px);
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.photo-image-link.is-portrait .photo-image {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: min(72vh, 760px);
+  object-fit: contain;
+}
+
+.photo-image-link.is-landscape .photo-image {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: min(72vh, 760px);
+  object-fit: contain;
+}
+
+.photo-image.is-exiting {
+  animation: photoSlideOutLeft 180ms ease forwards;
+}
+
+.photo-image.is-entering {
+  animation: photoSlideInRight 240ms ease forwards;
+}
+
+.photo-image.is-exiting-reverse {
+  animation: photoSlideOutRight 180ms ease forwards;
+}
+
+.photo-image.is-entering-reverse {
+  animation: photoSlideInLeft 240ms ease forwards;
+}
+
+.photo-caption {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.photo-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.photo-nav {
+  border: 1px solid #315064;
+  background: linear-gradient(180deg, #172232 0%, #141d2b 100%);
+  color: var(--ink);
+  border-radius: 10px;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+}
+
+.photo-nav:hover {
+  background: linear-gradient(180deg, #172232 0%, #141d2b 100%);
+}
+
+.photo-indicator {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.photo-thumbs {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.7rem;
+  scrollbar-width: thin;
+  scrollbar-color: #315064 #111a24;
+  scrollbar-gutter: stable;
+}
+
+.photo-thumb {
+  border: 1px solid #315064;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0;
+  cursor: pointer;
+  background: linear-gradient(180deg, #172232 0%, #141d2b 100%);
+  flex: 0 0 78px;
+}
+
+.photo-thumb img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: block;
+  object-fit: cover;
+}
+
+.photo-thumb.active {
+  border-color: var(--accent-ring);
+  box-shadow: 0 0 0 1px var(--accent-ring);
+}
+
+.photo-thumb:hover {
+  transform: none;
+  border-color: #315064;
+  box-shadow: none;
+}
+
+.photo-thumbs::-webkit-scrollbar {
+  height: 8px;
+}
+
+.photo-thumbs::-webkit-scrollbar-track {
+  background: #111a24;
+  border-radius: 999px;
+}
+
+.photo-thumbs::-webkit-scrollbar-thumb {
+  background: #315064;
+  border-radius: 999px;
+}
+
+@keyframes photoSlideOutLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-12%);
+    opacity: 0;
+  }
+}
+
+@keyframes photoSlideInRight {
+  from {
+    transform: translateX(12%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes photoSlideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(12%);
+    opacity: 0;
+  }
+}
+
+@keyframes photoSlideInLeft {
+  from {
+    transform: translateX(-12%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 880px) {
@@ -121,4 +336,6 @@
     --card-offset: 2.8rem;
     --group-shift: 1rem;
   }
+
+  .photo-image { max-height: 62vh; }
 }
