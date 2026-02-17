@@ -1,12 +1,16 @@
 (() => {
+  const INCLUDE_CACHE_VERSION = "2026-02-17";
+
   const isLocalhost =
     window.location.hostname === "localhost" ||
     window.location.hostname === "127.0.0.1";
 
+  const cacheKey = (url) => `include:${INCLUDE_CACHE_VERSION}:${url}`;
+
   function getCachedInclude(url) {
     if (isLocalhost) return null;
     try {
-      return window.sessionStorage.getItem(`include:${url}`);
+      return window.sessionStorage.getItem(cacheKey(url));
     } catch {
       return null;
     }
@@ -15,7 +19,7 @@
   function setCachedInclude(url, html) {
     if (isLocalhost) return;
     try {
-      window.sessionStorage.setItem(`include:${url}`, html);
+      window.sessionStorage.setItem(cacheKey(url), html);
     } catch {
       // Ignore quota/security errors; this is only a best-effort optimization.
     }

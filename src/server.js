@@ -20,15 +20,14 @@ app.use(
     setHeaders(res, filePath) {
       const ext = path.extname(filePath).toLowerCase();
 
-      if (ext === ".html") {
-        res.setHeader("Cache-Control", "no-cache");
+      // Always revalidate documents and styles/scripts so normal refresh
+      // picks up latest deploys without requiring a hard refresh.
+      if (ext === ".html" || ext === ".css" || ext === ".js" || ext === ".mjs") {
+        res.setHeader("Cache-Control", "no-cache, must-revalidate");
         return;
       }
 
       const cacheable = new Set([
-        ".css",
-        ".js",
-        ".mjs",
         ".png",
         ".jpg",
         ".jpeg",
@@ -43,7 +42,7 @@ app.use(
       if (cacheable.has(ext)) {
         res.setHeader(
           "Cache-Control",
-          "public, max-age=604800, stale-while-revalidate=86400"
+          "public, max-age=2592000, immutable"
         );
       }
     }
