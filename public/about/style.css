@@ -1,9 +1,23 @@
 /* About page tweaks */
+.about-blurb {
+  font-size: 1.02rem;
+  max-width: 72ch;
+}
+
 .card ul {
   margin-top: 0.3rem;
 }
 .card ul li {
   margin-bottom: 0.2rem;
+}
+
+.card a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
 }
 
 .timeline {
