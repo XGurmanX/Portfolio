@@ -1,26 +1,79 @@
+
 # Gurman Pannu
-**Aspiring Software Engineer — systems-aware, pragmatic, focused on shipping reliable small projects.**
 
-This repository powers my portfolio site (https://gurmanpannu.dev). It shows how I structure and deploy simple, maintainable software.
+**Software Engineer**  
+I build small, production-ready systems with clean architecture and practical deployment workflows.
 
-## What I focus on
-- Shipping end-to-end: small front ends, simple APIs, deployable containers.
-- Proven tools: Node/Express, HTML/CSS/JS, Docker, Cloud Run.
-- Clarity over flash: minimal dependencies, straightforward structure, documented flow.
+This repository powers my portfolio site:  
+👉 https://gurmanpannu.dev
 
-## Highlights in this repo
-- Single-service Node/Express app serving static pages.
-- Contact form wired to SMTP (demonstrates basic backend integration).
-- Production-aware artifacts: Dockerfile, health check, and per-page folders.
-- Per-page folders (`public/home`, `projects`, `experience`, `skills`, `about`, `contact`, `404`) plus shared assets in `public/assets/common`. Shared header/footer are loaded as HTML snippets at runtime to avoid repetition.
+---
 
-## Deployed home
-Live at https://gurmanpannu.dev via Google Cloud Run with a custom domain.
+## What This Project Demonstrates
 
-## If you’re reviewing my work
-- Browse `public/` for layout and styling choices.
-- See `src/` for how config, routes, and mailer are separated.
-- Shared styling and nav logic live in `public/assets/common`.
-- Resume available on request (not stored in the repo).
+This is not just a static site — it reflects how I structure, containerize, and deploy applications in a production-aware way.
 
-Thanks for taking a look!
+- Backend built with **Node.js + Express**
+- REST-style routing and modular folder structure
+- Static frontend served through structured per-page directories
+- Containerized with **Docker**
+- Deployed to **Google Cloud Run**
+- CI/CD-driven deployment workflow
+
+The focus is reliability, clarity, and maintainability — not overengineering.
+
+---
+
+## Architecture Overview
+
+The project follows a simple, production-conscious layout:
+
+src/                 → Backend configuration, routes, mailer logic  
+public/  
+  home/  
+  projects/  
+  experience/  
+  skills/  
+  about/  
+  contact/  
+  404/  
+  assets/common/     → Shared styling, header/footer logic  
+
+Dockerfile           → Containerized deployment  
+
+Shared components (header/footer) are dynamically loaded at runtime to reduce duplication and improve maintainability.
+
+---
+
+## Backend Features
+
+- Express server with environment-based configuration
+- Contact form integration using SMTP (backend mail handling)
+- Health check endpoint for container readiness
+- Structured separation of configuration and routing logic
+
+---
+
+## Deployment
+
+- Containerized with Docker
+- Hosted on **Google Cloud Run**
+- Custom domain configuration
+- Zero-downtime deployment via automated pipeline
+
+Live site: https://gurmanpannu.dev
+
+---
+
+## Design Philosophy
+
+- Keep dependencies minimal  
+- Keep structure readable  
+- Build software that is easy to deploy  
+- Favor clarity over cleverness  
+
+---
+
+## Resume
+
+Available upon request.
