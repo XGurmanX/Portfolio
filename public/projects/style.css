@@ -2,6 +2,17 @@
 .card {
   min-height: 360px;
 }
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card .btn {
+  margin-top: auto;
+  width: fit-content;
+}
+
 .chip-list {
   margin-top: 0.2rem;
 }
