@@ -119,25 +119,36 @@
   box-shadow: inset 0 1px 0 rgba(232, 237, 243, 0.04);
 }
 
+.experience-snapshot .card,
 .project-showcase .card {
   background: linear-gradient(180deg, #172232 0%, #141d2b 100%);
   border-color: #315064;
   box-shadow: inset 0 1px 0 rgba(232, 237, 243, 0.04);
 }
 
+.experience-snapshot > h2,
 .project-showcase > h2 {
   margin-bottom: 0.2rem;
 }
 
+.experience-snapshot .subtitle,
 .project-showcase .subtitle {
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
+.experience-snapshot .card h2,
 .project-showcase .card h2,
 .story-grid .card h2 {
   font-size: 1.2rem;
   color: #f0f6fc;
+}
+
+.experience-snapshot .experience-date {
+  margin: 0.1rem 0 0.5rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 600;
 }
 
 .timeline {

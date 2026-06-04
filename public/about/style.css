@@ -1,7 +1,44 @@
 /* About page tweaks */
+.about-hero {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: 1.35fr 0.85fr;
+  align-items: start;
+}
+
+.about-copy h1 {
+  margin-top: 0.2rem;
+  margin-bottom: 0.8rem;
+}
+
 .about-blurb {
   font-size: 1.02rem;
   max-width: 72ch;
+}
+
+.about-points {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.point-card,
+.fact-card {
+  border: 1px solid #315064;
+  border-radius: 14px;
+  padding: 1rem 1.05rem;
+  background: rgba(14, 24, 36, 0.55);
+}
+
+.point-card p:last-child,
+.fact-card p:last-child {
+  margin-bottom: 0;
+}
+
+.fact-card h2 {
+  margin-top: 0.2rem;
+  margin-bottom: 0.45rem;
+  font-size: 1.18rem;
+  color: var(--ink);
 }
 
 .card ul {
@@ -332,6 +369,10 @@
 }
 
 @media (max-width: 880px) {
+  .about-hero {
+    grid-template-columns: 1fr;
+  }
+
   .timeline {
     --card-offset: 2.8rem;
     --group-shift: 1rem;

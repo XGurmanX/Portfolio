@@ -1,7 +1,39 @@
 /* Experience page tweaks */
+.experience-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
 .experience-block h2 {
   font-size: 1.3rem;
+  margin-top: 0.2rem;
 }
+
+.experience-date {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
 .card ul {
   margin-top: 0.4rem;
+}
+
+@media (max-width: 720px) {
+  .experience-header {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .experience-date {
+    white-space: normal;
+  }
 }
