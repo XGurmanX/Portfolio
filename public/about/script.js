@@ -1,4 +1,17 @@
 (() => {
+  document.querySelectorAll("[data-optional-photo]").forEach((frame) => {
+    const image = frame.querySelector("img");
+    if (!image) return;
+
+    image.addEventListener("error", () => {
+      frame.classList.add("is-empty");
+    });
+
+    if (image.complete && image.naturalWidth === 0) {
+      frame.classList.add("is-empty");
+    }
+  });
+
   const host = document.querySelector("[data-photo-gallery]");
   if (!host) return;
 

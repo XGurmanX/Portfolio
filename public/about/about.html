@@ -11,37 +11,78 @@
     <header class="site-header" data-include="header"></header>
 
     <main>
-      <section>
-        <h1>About</h1>
-        <div class="card">
+      <section class="card about-intro-card">
+        <div class="about-intro-copy">
           <p class="label">About Me</p>
-          <p class="about-blurb">...</p>
+          <h1>Hi, I'm Gurman Pannu.</h1>
+          <p class="about-blurb">
+            I'm a Software Engineering student at BCIT who enjoys building 
+            technology and understanding how systems work behind the scenes. 
+            What started with computers and gaming gradually grew into 
+            a broader interest in software, networking, infrastructure, 
+            AI, and technology in general.
+          </p>
+          <p class="about-blurb">
+            Outside of software, I spend a lot of time working on personal projects, 
+            photography, and exploring British Columbia. Riding my Honda Rebel 300 
+            and getting out on the road gives me a chance to recharge and experience 
+            new places, while photography allows me to capture the moments and landscapes 
+            I come across.
+          </p>
+          <p class="about-blurb">
+            I'm always looking for opportunities to learn, contribute to meaningful 
+            projects, and continue growing as a developer while working with people 
+            who are passionate about technology.
+          </p>
+        </div>
+
+        <div class="about-intro-media">
+          <figure
+            class="about-photo-card about-photo-card-placeholder"
+            data-optional-photo
+          >
+            <img
+              class="about-photo"
+              src="/assets/images/bike.jpg"
+              alt="Gurman Pannu with his motorcycle"
+              width="520"
+              height="640"
+            />
+            <figcaption class="about-photo-placeholder">
+              Add your bike photo as
+              <code>/public/assets/images/bike.jpg</code>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
-      <section>
-        <div class="grid two">
-          <article class="card">
-            <p class="label">Based In</p>
-            <p>Delta, BC, Canada</p>
-          </article>
-
-          <article class="card">
-            <p class="label">Hobbies</p>
+      <section class="personal-grid-section">
+        <div class="grid two personal-grid">
+          <article class="card personal-card">
+            <h2>Photography</h2>
             <p>
-              Photography. View my photo work on
-              <a
-                href="https://www.instagram.com/gproductionsx/"
-                target="_blank"
-                rel="noreferrer"
-                >Instagram</a
-              >. or see some samples below
+              Photography gives me a creative outlet outside of software. I
+              like capturing wilelife and nature, moments that feel worth
+              remembering and looking back on.
             </p>
           </article>
 
-          <article class="card">
-            <p class="label">More About Me</p>
-            <p>More personal details coming soon.</p>
+          <article class="card personal-card">
+            <h2>Exploring</h2>
+            <p>
+              Riding my Rebel 300, getting out on road trips, and
+              exploring different parts of British Columbia all go together for
+              me. It is how I reset, get outdoors, and see new places.
+            </p>
+          </article>
+
+          <article class="card personal-card">
+            <h2>Projects</h2>
+            <p>
+              Personal projects are one of the main ways I keep learning. I
+              like building things that solve a problem and push me into
+              learning something new.
+            </p>
           </article>
         </div>
       </section>
@@ -51,64 +92,6 @@
         <p class="subtitle">A rotating selection from my work.</p>
         <div class="card photo-card" data-photo-gallery>
           <p class="photo-status">Loading photos...</p>
-        </div>
-      </section>
-
-      <section class="education">
-        <h2>Education</h2>
-        <p class="subtitle">
-          CST diploma with a Data Communications option, with BScACS studies
-          continuing next.
-        </p>
-        <div class="timeline">
-          <div class="timeline-group single">
-            <article class="timeline-item">
-              <span class="timeline-year">Sept 2026 - May 2028</span>
-              <div class="timeline-card">
-                <p class="label">BCIT</p>
-                <h3>BSc Applied Computer Science (BScACS)</h3>
-                <p>
-                  September 2026 - May 2028. Upper-level study focused on
-                  software engineering practices, systems depth, and applied
-                  computing. Emphasis on design tradeoffs, performance,
-                  reliability, and building maintainable production-quality
-                  software.
-                </p>
-              </div>
-            </article>
-          </div>
-
-          <div class="timeline-group">
-            <article class="timeline-item grouped">
-              <span class="timeline-year">Sept 2024 - May 2026</span>
-              <div class="timeline-card">
-                <p class="label">BCIT</p>
-                <h3>Computer Systems Technology (CST)</h3>
-                <p>
-                  Two-year diploma built around hands-on software engineering
-                  fundamentals: data structures, databases, networking,
-                  operating systems, and full-stack delivery. Coursework
-                  emphasizes practical labs, team projects, and building
-                  end-to-end systems.
-                </p>
-                <p class="label">Data Communications Option</p>
-                <ul>
-                  <li>
-                    Advanced networking, distributed systems, and systems-level
-                    programming.
-                  </li>
-                  <li>
-                    How data moves across networks and how servers communicate
-                    reliably at scale.
-                  </li>
-                  <li>
-                    Designing and implementing multi-server architectures with
-                    low-level sockets and structured protocols.
-                  </li>
-                </ul>
-              </div>
-            </article>
-          </div>
         </div>
       </section>
     </main>
