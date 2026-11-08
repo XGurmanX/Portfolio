@@ -11,7 +11,7 @@ This repository powers my portfolio site:
 
 ## What This Project Demonstrates
 
-This is not just a static site — it reflects how I structure, containerize, and deploy applications in a production-aware way.
+This is not just a static site - it reflects how I structure, containerize, and deploy applications in a production-aware way.
 
 - Backend built with **Node.js + Express**
 - REST-style routing and modular folder structure
@@ -20,7 +20,7 @@ This is not just a static site — it reflects how I structure, containerize, an
 - Deployed to **Google Cloud Run**
 - CI/CD-driven deployment workflow
 
-The focus is reliability, clarity, and maintainability — not overengineering.
+The focus is reliability, clarity, and maintainability - not overengineering.
 
 ---
 
